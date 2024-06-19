@@ -1,0 +1,36 @@
+{
+  "name": "e-mart",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "SET NODE_ENV=DEVELOPMENT&SET PORT=4000& nodemon server/server",
+    "prod": "SET NODE_ENV=PRODUCTION&SET PORT=4000& nodemon server/server",
+    "seeder": "node server/utils/seeder.js",
+    "heroku-postbuild":"NPM_CONFIG_PRODUCTION=false && npm install --prefix client && npm run build --prefix client"
+  },
+  "author": "smit ajani",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "cloudinary": "^1.23.0",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-fileupload": "^1.5.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^5.10.16",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.13",
+    "react-dev-utils": "^10.0.0",
+    "react-scripts": "^5.0.1",
+    "stripe": "^15.11.0",
+    "validator": "^13.12.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.3"
+  }
+}
